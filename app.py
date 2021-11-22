@@ -3,7 +3,6 @@ import pandas as pd
 import joblib
 from datetime import datetime
 
-
 car = pd.read_csv('Carmodel.csv')
 model = joblib.load("LinearRegressionModel.pkl")
 car_company = ['Audi', 'BMW', 'Chevrolet', 'Datsun', 'Fiat', 'Force', 'Ford',
@@ -17,7 +16,7 @@ st.text("")
 car_com = st.selectbox('Select Car company', car_company, help='Enter the name of your car')
 car_model = st.selectbox('Select Car model', car[car_com].dropna().values, help='Enter the name of your car model')
 car_purchased = st.text_input('Year Purchased', 2005, help='Enter the year the car was purchased')
-car_driven = st.slider('Kilometers driven', 1, 300000, help='How much kilometers the car was driven')
+car_driven = st.slider('Kilometers driven', 1, 100000, help='How much kilometers the car was driven')
 car_type = st.selectbox('Select Fuel type', ['Petrol', 'Diesel'], help='Enter fuel type')
 
 st.text("")
