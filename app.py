@@ -31,5 +31,5 @@ if predict:
         txt = 'Predicted Price of ' + car_model + ': ' + ' ₹' + str(int(model_pred[0]))
         st.subheader(txt)
     else:
-        txt = "This car cannot be sold as the conditions of the car are not satisfactory. It will be best to throw it in scrap."
+        txt = "They do not fit in the condition."
         st.subheader(txt)
